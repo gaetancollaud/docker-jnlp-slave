@@ -1,0 +1,8 @@
+version: '3.2'
+services:
+  slave:
+    image: gaetancollaud/jnlp-slave
+    build: .
+    container_name: jenkins-slave
+    command: -url <url> <secret> <node-name>
+    privileged: true
